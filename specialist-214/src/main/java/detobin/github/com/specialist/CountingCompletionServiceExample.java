@@ -1,23 +1,21 @@
 package detobin.github.com.specialist;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 
-public class ExecutorServiceExample {
+public class CountingCompletionServiceExample {
 	public static void main(String... args) throws Exception {
 		try (DotPrinter dp = new DotPrinter()) {
 			ExecutorService pool = Executors.newCachedThreadPool();
-			Collection<Future<Integer>> futures = new ArrayList<>();
+			CountingCompletionService<Integer> service = new CountingCompletionService<>(
+					pool);
 			for (int i = 0; i < 10; i++) {
-				futures.add(pool.submit(new Work(i)));
+				service.submit(new Work(i));
 			}
-			for (Future<Integer> future : futures) {
-				System.out.printf("Job %d is done%n", future.get());
+			for (int i = 0; i < service.getNumberOfSubmittedTasks(); i++) {
+				System.out.printf("Job %d is done%n", service.take().get());
 			}
 			pool.shutdown();
 		}

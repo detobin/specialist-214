@@ -2,11 +2,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <groupId>com.cedarsoft</groupId>
-    <artifactId>open</artifactId>
-    <version>4.0.2</version>
-  </parent>
+<!--   <parent> -->
+<!--     <groupId>com.cedarsoft</groupId> -->
+<!--     <artifactId>open</artifactId> -->
+<!--     <version>4.0.2</version> -->
+<!--   </parent> -->
 
   <groupId>detobin.github.com</groupId>
   <artifactId>specialist-214</artifactId>
@@ -16,31 +16,35 @@
     <connection>scm:git:git://git.cedarsoft.com/detobin.github.com.specialist-214</connection>
     <developerConnection>scm:git:ssh://git.cedarsoft.com/home/git/detobin.github.com.specialist-214</developerConnection>
   </scm>
+  
+  <build>
+  </build>
 
   <dependencies>
     <!--Guava-->
-    <dependency>
-      <groupId>com.google.guava</groupId>
-      <artifactId>guava</artifactId>
-    </dependency>
+<!--     <dependency> -->
+<!--       <groupId>com.google.guava</groupId> -->
+<!--       <artifactId>guava</artifactId> -->
+<!--     </dependency> -->
 
     <!--NotNull Annotations-->
-    <dependency>
-      <groupId>com.intellij</groupId>
-      <artifactId>annotations</artifactId>
-      <scope>provided</scope>
-    </dependency>
+<!--     <dependency> -->
+<!--       <groupId>com.intellij</groupId> -->
+<!--       <artifactId>annotations</artifactId> -->
+<!--       <scope>provided</scope> -->
+<!--     </dependency> -->
 
     <!--Test Dependencies-->
-    <dependency>
-      <groupId>com.cedarsoft.commons</groupId>
-      <artifactId>test-utils</artifactId>
-      <version>3.0.0</version>
-      <scope>test</scope>
-    </dependency>
+<!--     <dependency> -->
+<!--       <groupId>com.cedarsoft.commons</groupId> -->
+<!--       <artifactId>test-utils</artifactId> -->
+<!--       <version>3.0.0</version> -->
+<!--       <scope>test</scope> -->
+<!--     </dependency> -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
+      <version>4.11</version>
     </dependency>
   </dependencies>
 
